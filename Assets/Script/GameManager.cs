@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager I;
     public Text scoreText;
     public Text timeText;
+    public GameObject red_rain;
     int totalScore;
     float limit = 60f;
 
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
     {
         initGame();
         InvokeRepeating("makeRain", 0, 0.5f);
+        InvokeRepeating("makeRedRain", 0, 1.5f);
     }
 
     // Update is called once per frame
@@ -47,9 +49,20 @@ public class GameManager : MonoBehaviour
         Instantiate(rain);
     }
 
+    void makeRedRain()
+    {
+        Instantiate(red_rain);
+    }
+
     public void addScore(int score)
     {
         totalScore += score;
+        scoreText.text = totalScore.ToString();
+    }
+
+    public void minusScore (int minusscore)
+    {
+        totalScore -= minusscore;
         scoreText.text = totalScore.ToString();
     }
 

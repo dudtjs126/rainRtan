@@ -962,6 +962,7 @@ MonoBehaviour:
   panel: {fileID: 1130620960}
   scoreText: {fileID: 260150491}
   timeText: {fileID: 565221643}
+  red_rain: {fileID: 3666526212592764352, guid: 4859d4ff0f1468844aab4cb4d9971c5b, type: 3}
 --- !u!4 &1200089585
 Transform:
   m_ObjectHideFlags: 0
